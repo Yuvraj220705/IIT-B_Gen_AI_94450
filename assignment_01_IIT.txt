@@ -1,0 +1,14 @@
+assignment 01 IIT-B
+
+Git installation 
+Repo creation
+Git Commands:
+Git init,
+git config --
+git log,
+git commit,
+git add,
+git clone,
+git push,
+git status,
+git collaborators.
