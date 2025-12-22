@@ -44,7 +44,7 @@ def gemini(user_input):
         "contents": [
             {
                 "parts": [
-                    {"text": user_input}
+                    {"text": "Hello, how are you?"}
                 ]
             }
         ]

@@ -62,7 +62,7 @@ llm = init_chat_model(
     model = "llama-3.3-70b-versatile",
     model_provider= "openai",
     base_url = "https://api.groq.com/openai/v1",
-    api_key = "GROQ_API_KEY"
+    api_key = "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"
 
 )
 

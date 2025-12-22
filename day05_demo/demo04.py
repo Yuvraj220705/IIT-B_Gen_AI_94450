@@ -1,0 +1,31 @@
+from langchain.chat_models import init_chat_model
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+llm = init_chat_model(
+    model="llama-3.3-70b-versatile",
+    model_provider="openai",
+    base_url="https://api.groq.com/openai/v1",
+    api_key=os.getenv("GROQ_API_key")
+)
+
+conversation = [
+    {"role": "user", "content": "You are a loving mom who wants to keep user always in comfort not in hardwork."},
+]
+
+while True:
+    user_input = input("User:")
+    if user_input == "exit":
+        break
+
+
+    user_msg = {"role": "user", "content": user_input}
+    conversation.append(user_msg)
+
+    llm_output = llm.invoke(conversation)
+    print("AI:", llm_output.content)
+
+    llm_msg = {"role": "assistant", "content": llm_output.content}
+    conversation.append(llm_msg)
+
